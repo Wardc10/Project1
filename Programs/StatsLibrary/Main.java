@@ -7,7 +7,10 @@ public class Main {
         tester.populateTestArray(10.0);
         //run the tests with the now populated array
         tester.testStatsFunctions();
+        //tester for Permutation and Combination
+        tester.testPermuatationCombination(6,3);
+        //tester for the distribution functions
+        tester.testDistributions(5, 0.4, 0.6, 2);
         //print the results of our stats tests
-        tester.printTestResults();
     }
 }

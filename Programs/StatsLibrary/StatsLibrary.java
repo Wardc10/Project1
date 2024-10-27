@@ -31,15 +31,18 @@ public class StatsLibrary
 	}
 	
 	//mode method
-	//still doesn't work right
 	public double findMode(ArrayList<Double> userInputNumbers) {
+
+		if(userInputNumbers.isEmpty()){
+
+		}
 		int maxCount = 0;
 		double maxValue = 0;
 		int n = userInputNumbers.size();
 		for(int i=0; i<n; i++) {
 			int count = 0;
 			for(int j=0; j<n; j++) {
-				if(userInputNumbers.get(j) == userInputNumbers.get(i)) {
+				if(userInputNumbers.get(j).equals(userInputNumbers.get(i))) {
 					count++;
 				}
 			}
@@ -47,6 +50,11 @@ public class StatsLibrary
 				maxCount = count;
 				maxValue = userInputNumbers.get(i);
 			}
+		}
+		//this return NaN if there is no mode
+		//used NaN so i could return type double without printing anything to cmd like ("No mode found")
+		if(maxCount == 1){
+			return Double.NaN;
 		}
 		return maxValue;
 	}
@@ -160,20 +168,4 @@ public class StatsLibrary
 	public double geometric (double p, double q, double y) {
         return (Math.pow(q, y-1)) * p;
     }
-	
-	//Hypergeometric Distribution solver 
-	public double hypergeometric (int r, int y, int bign, int n) {
-		return (combination(r,y)*combination(bign-r,n-y))/combination(bign,n);
-	}
-	
-	//Negative Binomial Distribution Solver
-	public double negative_binomial (int y, int r, double p, double q) {
-		return combination(y-1,r-1)*(Math.pow(p, r))*Math.pow(q, y-r);
-	}
-	
-	//Poisson Distribution
-	public double poisson (double lambda, int y) {
-		return (Math.pow(lambda, y)/fact(y))*Math.pow(2.71828, -lambda);
-	}
-	
 }
