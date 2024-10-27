@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class CSVWriter {
+public class PokeCSVWriter {
 
     public void writeToCSV(ArrayList<Double> data, String fileName) {
 

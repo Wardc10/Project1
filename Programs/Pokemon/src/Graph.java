@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-import com.opencsv.CSVWriter;
 
 public class Graph {
 
@@ -22,7 +21,7 @@ public class Graph {
             //create the fileWriter
             FileWriter outputfile = new FileWriter(CSVfile);
             //create the CSVWriter
-            CSVWriter writer = new CSVWriter(outputfile);
+            PokeCSVWriter writer = new PokeCSVWriter(outputfile);
             String[] header = {"Pkm in Deck", "Avg # of hands to play a pkm"};
             for(int i=0; i<graphPoints.size(); i++){
                 if(i==0){

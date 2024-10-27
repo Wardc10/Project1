@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class Tester {
+public class BdayTester {
 
     //minPeople & maxPeople variables act as lower & upper bounds for the birthday checker test
     //private int minPeople = 10;
@@ -23,15 +23,15 @@ public class Tester {
     public void graphBirthdays(int minPeople, int maxPeople, int runs){
         
         //create an arraylist of Pairs for easy csv exporting
-        ArrayList<Pair> coordinates = new ArrayList<Pair>();
+        ArrayList<BdayPair> coordinates = new ArrayList<BdayPair>();
         //initializes the CSVWriter
-        CSVWriter csvWriter = new CSVWriter();
+        BdayCSVWriter csvWriter = new BdayCSVWriter();
 
         //Calls birthday Checker passing through number of runs, and number of random people to create and test
         for(int i=minPeople; i<=maxPeople; i++){
 
             //run checker to calculate the sharedBirthdayAvg
-            Pair coordinate = new Pair(i, checker.sharedBirthdayAvg(runs, i));
+            BdayPair coordinate = new BdayPair(i, checker.sharedBirthdayAvg(runs, i));
             coordinates.add(coordinate);
         }
 
