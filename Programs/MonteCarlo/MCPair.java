@@ -1,4 +1,4 @@
-public class MHPair {
+public class MCPair {
     private int sims;
     private double avg;
 

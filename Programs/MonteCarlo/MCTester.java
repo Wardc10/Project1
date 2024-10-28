@@ -1,19 +1,19 @@
 import java.util.ArrayList;
 
-public class MHTester {
+public class MCTester {
 
-    public MHTester(){
+    public MCTester(){
 
     }
 
     //initialize the monteCarlo game
     Game monteCarlo = new Game();
 
-    MonteHallCSVWriter csvWriter = new MonteHallCSVWriter();
+    MonteCarloCSVWriter csvWriter = new MonteCarloCSVWriter();
 
     //initialize arraylist for our coordinate for each test
-    ArrayList<MHPair> keepDoorCoordinates = new ArrayList<>();
-    ArrayList<MHPair> changeDoorCoordinates = new ArrayList<>();
+    ArrayList<MCPair> keepDoorCoordinates = new ArrayList<>();
+    ArrayList<MCPair> changeDoorCoordinates = new ArrayList<>();
 
 
     //checkPow10 takes in an integer and runs the simulation for that many powers of 10 and output the results in a CSV
@@ -25,8 +25,8 @@ public class MHTester {
             double change = monteCarlo.changeDoor((int)(Math.pow(10,i)), doors);
 
             //Create Pairs of results in current loop to help with easy CSV exporting
-            MHPair pairKeep = new MHPair((int)Math.pow(10,i), keep);
-            MHPair pairChange = new MHPair((int)Math.pow(10,i), change);
+            MCPair pairKeep = new MCPair((int)Math.pow(10,i), keep);
+            MCPair pairChange = new MCPair((int)Math.pow(10,i), change);
             
 
             //add pairs to the ArrayLists

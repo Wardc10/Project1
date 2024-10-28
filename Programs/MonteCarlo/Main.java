@@ -13,7 +13,7 @@ public class Main{
     */
    
     public static void main(String args[]) {
-        MHTester t = new MHTester();
+        MCTester t = new MCTester();
         t.checkPow10(7, 3);
     }
 }
