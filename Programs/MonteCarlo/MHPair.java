@@ -3,7 +3,7 @@ public class MHPair {
     private double avg;
 
     //Pair constructor that takes in 'people' as x value and the 'avg' as y value
-    public MHPair(int sims, double avg){
+    public MCPair(int sims, double avg){
         this.sims = sims;
         this.avg = avg;
     }
